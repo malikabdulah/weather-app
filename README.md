@@ -1,16 +1,28 @@
-# React + Vite
+# Abar (ابر)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React weather application that provides live meteorological data, dynamic visual themes, and a custom daylight sun tracker.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was built to deliver accurate weather data while strictly managing API rate limits. It utilizes a dual API architecture, separating the geocoding search functionality from the core weather data fetching process to ensure optimal performance and resource management. 
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Dual API Search**: Uses a free geocoding API for responsive keystroke search and autocomplete without consuming primary API limits.
+* **Dynamic Backgrounds**: The user interface automatically shifts its color gradient and background images based on the current weather condition and the time of day.
+* **Custom Daylight Tracker**: An SVG based sun path calculates and displays the exact position of the sun based on local sunrise and sunset times.
+* **Local Caching**: Implements local storage to cache weather data for three hours, preventing unnecessary API calls on page reloads.
 
-## Expanding the ESLint configuration
+## Technical Skillset
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend**: React, Vite
+* **Styling**: Tailwind CSS
+* **Data Integration**: OpenWeather API (RapidAPI), Open-Meteo Geocoding API
+
+## Setup Instructions
+
+1. Clone the repository to your local machine.
+2. Run `npm install` to install all required dependencies.
+3. Create a `.env` file in the root directory of the project and add your RapidAPI key:
+   `VITE_RAPID_API_KEY=your_api_key_here`
+4. Run `npm run dev` to start the local development server.
