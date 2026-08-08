@@ -69,7 +69,7 @@ export default function SearchBar({ onSearch }) {
         />
         <button 
           type="submit"
-          className="bg-blue-700 text-white lg:px-6 md:px-5 rounded-full shadow-sm hover:bg-blue-900 transition-colors font-medium overflow-auto"
+          className="bg-blue-700 text-white px-6 rounded-full shadow-sm hover:bg-blue-900 transition-colors font-medium overflow-auto"
         >
           Search
         </button>
