@@ -83,7 +83,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [themeParams, setThemeParams] = useState(getVisualTheme(null));
 
-  const defaultCity = 'london';
+  const defaultCity = 'lahore';
 
  const loadWeather = async (cityName) => {
     setLoading(true);
