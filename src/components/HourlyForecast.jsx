@@ -5,8 +5,8 @@ export default function HourlyForecast({ data }) {
   if (!data || !data.sys || !data.main) return null;
 
   //extracting data from API
-  const min = Math.round(data.main.temp_min);
-  const max = Math.round(data.main.temp_max);
+  const min = Math.round((data.main.temp_min-32)/(9/5));
+  const max = Math.round((data.main.temp_max-32)/(9/5));
   const sunriseTime = data.sys.sunrise;
   const sunsetTime = data.sys.sunset;
   const currentTime = data.dt;
