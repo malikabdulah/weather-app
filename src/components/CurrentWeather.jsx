@@ -16,7 +16,7 @@ export default function CurrentWeather({ data }) {
       <p className="text-xl capitalize mb-6 drop-shadow-md">{description}</p>
       
       <div className="flex flex-col items-center">
-        <h1 className="text-7xl md:text-8xl font-extrabold drop-shadow-lg mb-2 ml-2">
+        <h1 className="text-7xl md:text-8xl font-extrabold drop-shadow-lg mb-2 ml-6">
           {temperature}°
         </h1>
         <p className="text-lg md:text-xl font-medium drop-shadow-md">
