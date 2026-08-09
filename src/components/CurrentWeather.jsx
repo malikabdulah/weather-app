@@ -17,7 +17,7 @@ export default function CurrentWeather({ data }) {
       
       <div className="flex flex-col items-center">
         <h1 className="text-7xl md:text-8xl font-extrabold drop-shadow-lg mb-2">
-          {temperature}°C
+          {temperature}°
         </h1>
         <p className="text-lg md:text-xl font-medium drop-shadow-md">
           Feels like {feelsLike}°C
