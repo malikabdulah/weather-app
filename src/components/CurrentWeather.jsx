@@ -3,8 +3,8 @@ import React from 'react';
 export default function CurrentWeather({ data }) {
   if (!data || !data.main) return null;
 
-  const temperature = Math.round(data.main.temp);
-  const feelsLike = Math.round(data.main.feels_like);
+  const temperature = Math.round((data.main.temp-32)/(9/5));
+  const feelsLike = Math.round((data.main.feels_like-32)/(9/5));
   const condition = data.weather && data.weather[0] ? data.weather[0].main : 'Unknown';
   const description = data.weather && data.weather[0] ? data.weather[0].description : '';
 
@@ -17,10 +17,10 @@ export default function CurrentWeather({ data }) {
       
       <div className="flex flex-col items-center">
         <h1 className="text-7xl md:text-8xl font-extrabold drop-shadow-lg mb-2">
-          {temperature}°F
+          {temperature}°C
         </h1>
         <p className="text-lg md:text-xl font-medium drop-shadow-md">
-          Feels like {feelsLike}°F
+          Feels like {feelsLike}°C
         </p>
       </div>
     </div>
